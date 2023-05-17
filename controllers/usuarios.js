@@ -88,9 +88,7 @@ const borrarUsuario = async ( req , res = response )=>{
         // "borrar usuario"
         const usuario = await Usuario.findByIdAndUpdate( id, { estado: false});
 
-        res.status(200).json({
-            usuario
-        })
+        res.status(200).json(usuario)
 
     } catch (error) {
         res.status(400).json({
