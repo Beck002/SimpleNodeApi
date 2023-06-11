@@ -22,7 +22,12 @@ const getUsuarios = async ( req , res = response )=>{
         })
 
     } catch (error) {
-        
+                
+        res.status(400).json({
+            ok: false, 
+            errorMessage: 'No se pudo acceder a los usuarios',
+            error
+        });
     }
 }
 
@@ -44,10 +49,7 @@ const crearUsuario = async ( req , res = response )=>{
         });
 
     } catch (error) {
-        res.json(400).json({
-            ok: false, 
-            errorMessage: "Error al intentar crear usuario"
-        });
+        res.json(error);
     }
 }
 

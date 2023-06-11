@@ -1,0 +1,5 @@
+        res.status(401).json({
+            ok: false, 
+            errorMessage: 'No se pudo crear la categoria',
+            error
+        })
