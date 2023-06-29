@@ -1,2 +1,5 @@
 node_modules/
 .env
+datos.txt
+uploads/productos/**.*
+uploads/usuarios/**.*
